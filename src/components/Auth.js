@@ -1,6 +1,7 @@
 import classes from './Auth.module.css';
 import {useDispatch} from 'react-redux'
 import { authActions } from '../store/auth-slice'
+import store from '../vanillaStore/index'
 const Auth = () => {
 
   const dispatch = useDispatch()
@@ -9,7 +10,7 @@ const Auth = () => {
   console.log(authActions)
   const loginHandler = (e) => {
     e.preventDefault();
-    dispatch(authActions.login())
+    dispatch({type: "LOGIN"})
   }
 
   return (

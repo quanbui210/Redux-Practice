@@ -1,6 +1,7 @@
 import counterReducer from './counter-slice';
 import authReducer from './auth-slice';
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
+import {createStore} from 'react-redux'
 
 
 
@@ -18,7 +19,6 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
 // console.log(counterSlice.actions) //actions is an object full of keys (method) that created
 //actions creator will create an action based on the key
-
 
 
 
