@@ -13,7 +13,7 @@ const initialCounterState = {
 const counterSlice = createSlice({
     name: 'counter', //first, need a name
     initialState: initialCounterState, // then setup initial state (object setup before)
-    reducers: { // an object with methods
+    reducers: { // an object with methods, synchronous reducers  
         increment(state, action) {
             state.counter = state.counter + action.payload;
         },
@@ -26,7 +26,9 @@ const counterSlice = createSlice({
         reset(state) {
             state.counter = 0
         },
-    }
+    },
+    // extraReducers for asynchronous data flow
+   
 })
 
 export const counterActions = counterSlice.actions

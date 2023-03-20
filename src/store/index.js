@@ -1,7 +1,8 @@
 import counterReducer from './counter-slice';
 import authReducer from './auth-slice';
+import todoReducer from './todo-slice'
 import { configureStore } from '@reduxjs/toolkit';
-import {createStore} from 'react-redux'
+
 
 
 
@@ -25,7 +26,8 @@ import {createStore} from 'react-redux'
 const store = configureStore({
     reducer: {
         counter: counterReducer,
-        auth: authReducer
+        auth: authReducer,
+        todo: todoReducer,
     }
 }) 
 //point to reducer function
